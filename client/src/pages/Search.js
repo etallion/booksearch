@@ -59,6 +59,8 @@ class Books extends Component {
       API.saveBook({
         title: this.state.books[i].title,
         author: this.state.books[i].author,
+        previewLink: "http://www.espn.com",
+        // previewLink: this.state.books[i].previewLink,
         synopsis: this.state.books[i].synopsis
       })
         .then(res => {
@@ -94,7 +96,7 @@ class Books extends Component {
                             value={this.state.term}
                             onChange={this.handleInputChange}
                             name="term"
-                            placeholder="Search for a good book"
+                            placeholder="Search for a book"
                         />
                     </div>
                     <div className="col-md-1">

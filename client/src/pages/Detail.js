@@ -31,7 +31,8 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Synopsis</h1>
+              {console.log(this.state.book.previewLink)}
+              <h1>Synopsis</h1> <a href={this.state.book.previewLink} >View online</a>
               <p>
                 {this.state.book.synopsis}
               </p>
