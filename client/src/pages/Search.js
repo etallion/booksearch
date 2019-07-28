@@ -59,8 +59,7 @@ class Books extends Component {
       API.saveBook({
         title: this.state.books[i].title,
         author: this.state.books[i].author,
-        previewLink: "http://www.espn.com",
-        // previewLink: this.state.books[i].previewLink,
+        previewLink: this.state.books[i].previewLink,
         synopsis: this.state.books[i].synopsis
       })
         .then(res => {
