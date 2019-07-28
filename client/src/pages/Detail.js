@@ -40,7 +40,7 @@ class Detail extends Component {
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Authors</Link>
+            <Link to="/saved">← Back to Saved List</Link>
           </Col>
         </Row>
       </Container>

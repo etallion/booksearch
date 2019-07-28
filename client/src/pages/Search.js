@@ -87,19 +87,25 @@ class Books extends Component {
             <Jumbotron>
               <h1>Find a good book to read!</h1>
             </Jumbotron>
-            <form className="input-group">
-              <Input
-                value={this.state.term}
-                onChange={this.handleInputChange}
-                name="term"
-                placeholder="Search for a good book"
-              />
-              <FormBtn
-                disabled={!(this.state.term)}
-                onClick={this.handleSearch}
-              >
-                Search
-              </FormBtn>
+            <form>
+                <div className="row">
+                    <div className="col-md-11">
+                        <Input
+                            value={this.state.term}
+                            onChange={this.handleInputChange}
+                            name="term"
+                            placeholder="Search for a good book"
+                        />
+                    </div>
+                    <div className="col-md-1">
+                        <FormBtn
+                            disabled={!(this.state.term)}
+                            onClick={this.handleSearch}
+                        >
+                            Search
+                        </FormBtn>
+                    </div>
+                </div>
             </form>
           </Col>
          
