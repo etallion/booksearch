@@ -1,5 +1,5 @@
 import axios from "axios";
-const KEY = process.env.GOOGLE_BOOK_API || "AIzaSyCMfNwRZWWceWkuKDmib0GnIUaVXoCTe4A";
+// const KEY = process.env.GOOGLE_BOOK_API || "AIzaSyCMfNwRZWWceWkuKDmib0GnIUaVXoCTe4A";
 
 
 export default {
@@ -20,7 +20,7 @@ export default {
     return axios.post("/api/books", bookData);
   },
   searchBook: function(term) {
-    // return axios.get("/api/search/" + term);
-     return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + term + "&key=" + KEY);
+    return axios.get("/api/search/" + term);
+    //  return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + term + "&key=" + KEY);
   }
 };
