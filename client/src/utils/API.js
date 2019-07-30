@@ -1,6 +1,4 @@
 import axios from "axios";
-// const KEY = process.env.GOOGLE_BOOK_API || "AIzaSyCMfNwRZWWceWkuKDmib0GnIUaVXoCTe4A";
-
 
 export default {
   // Gets all books
@@ -21,6 +19,5 @@ export default {
   },
   searchBook: function(term) {
     return axios.get("/api/search/" + term);
-    //  return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + term + "&key=" + KEY);
   }
 };
