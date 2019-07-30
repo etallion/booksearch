@@ -25,9 +25,13 @@ class Books extends Component {
     // if(this.state.books){
         console.log(data);
         let foundBooks = data.map(book => {
+          let validAuthor = "NA";
+            if(book.volumeInfo.authors && book.volumeInfo.authors[0]){
+              validAuthor = book.volumeInfo.authors[0];
+            }
             return {
                 title: book.volumeInfo.title,
-                author: book.volumeInfo.authors[0],
+                author: validAuthor,
                 synopsis: book.volumeInfo.description,
                 previewLink: book.volumeInfo.previewLink
             }
